@@ -1,0 +1,22 @@
+# Nix
+result
+result-*
+
+# Secrets (never commit)
+secrets/
+*.secret
+*.key
+.secrets
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

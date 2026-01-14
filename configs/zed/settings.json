@@ -1,0 +1,17 @@
+{
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "vim_mode": true,
+  "minimap": {
+    "show": "never"
+  },
+  "auto_indent_on_paste": true,
+  "tab_size": 2,
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15.0,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "poimandres"
+  }
+}

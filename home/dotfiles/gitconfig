@@ -1,0 +1,35 @@
+[user]
+	email = sandonnlai@gmail.com
+	name = Sandon Lai
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHbgeG4NBEr1dWWLzee0oNUgbHCbG4aWh1lmC5SRXVN1
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	# 1Password SSH signing - path differs by platform
+	# macOS: /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	# Linux: /opt/1Password/op-ssh-sign
+	# This is set dynamically by the includeIf below
+
+[commit]
+	gpgsign = true
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[core]
+	editor = vim
+
+# Platform-specific 1Password signing
+[includeIf "gitdir:/Users/"]
+	path = ~/.gitconfig-macos
+
+[includeIf "gitdir:/home/"]
+	path = ~/.gitconfig-linux

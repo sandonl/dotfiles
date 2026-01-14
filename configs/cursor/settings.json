@@ -1,0 +1,51 @@
+{
+  "workbench.colorTheme": "poimandres",
+  "editor.minimap.enabled": false,
+  "editor.formatOnPaste": true,
+  "editor.largeFileOptimizations": false,
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "window.zoomLevel": 1,
+  "editor.codeLens": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "git.autorefresh": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "redhat.telemetry.enabled": false,
+  "security.promptForLocalFileProtocolHandling": false,
+  "extensions.ignoreRecommendations": true,
+  "editor.indentSize": "tabSize",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "explicit"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "mikeburgh.xml-format"
+  },
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.referencesCodeLens.enabled": true,
+  "workbench.activityBar.orientation": "vertical",
+  "claudeCode.selectedModel": "default",
+  "claudeCode.useTerminal": true
+}
