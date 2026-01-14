@@ -11,6 +11,12 @@
 # Required for proper theming in tools like OpenCode, especially inside tmux
 export COLORTERM=truecolor
 
+# Fix for xterm-ghostty on remote VMs that don't have the terminfo
+# Fall back to xterm-256color which is universally available
+if [[ "$TERM" == "xterm-ghostty" ]] && ! infocmp xterm-ghostty &>/dev/null; then
+  export TERM="xterm-256color"
+fi
+
 # =============================================================================
 # Secrets (API keys, tokens - not in repo)
 # =============================================================================
