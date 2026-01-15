@@ -1,15 +1,10 @@
 # Sandon's SSH Config
 # Managed by dotfiles - https://github.com/sandonl/dotfiles
-#
-# NOTE: 1Password SSH bookmarks and agent config are managed locally on macOS
-# via ~/.ssh/config (not tracked in dotfiles). See README for setup instructions.
 
 # =============================================================================
-# Development VMs (Tailscale) - Add your own hosts here
+# Local Overrides (machine-specific, not tracked in git)
 # =============================================================================
-# Host dev-vm
-# 	HostName 100.x.x.x
-# 	User sandon
+Include ~/.ssh/config.local
 
 # =============================================================================
 # Global Settings
