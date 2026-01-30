@@ -1,6 +1,6 @@
 {
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "vim_mode": true,
+  "vim_mode": false,
   "minimap": {
     "show": "never"
   },
