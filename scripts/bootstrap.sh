@@ -23,8 +23,8 @@ set -euo pipefail
 # =============================================================================
 
 # 1Password item reference for the SSH key
-# Format: op://vault/item/field
-OP_SSH_KEY_REF="op://Employee/github-dotfiles-vm/private key"
+# ?ssh-format=openssh ensures export in OpenSSH format (not PKCS#8)
+OP_SSH_KEY_REF="op://Employee/github-dotfiles-vm/private key?ssh-format=openssh"
 
 echo "=== Sandon's VM Bootstrap ==="
 echo ""
@@ -93,13 +93,6 @@ if [[ ! -f "$SSH_KEY" ]]; then
 
   op read "$OP_SSH_KEY_REF" --out-file "$SSH_KEY" --force
   chmod 600 "$SSH_KEY"
-
-  # Convert from PKCS#8 (1Password export format) to OpenSSH format
-  if head -1 "$SSH_KEY" | grep -q "BEGIN PRIVATE KEY"; then
-    ssh-keygen -p -N "" -f "$SSH_KEY" >/dev/null
-    echo "Converted key from PKCS#8 to OpenSSH format."
-  fi
-
   ssh-keygen -y -f "$SSH_KEY" > "${SSH_KEY}.pub"
   chmod 644 "${SSH_KEY}.pub"
   echo "SSH signing key extracted from 1Password."
