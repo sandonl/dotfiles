@@ -63,6 +63,13 @@
         # =============================================================================
         Host *
         	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+        # =============================================================================
+        # VM Shortcut (macOS only)
+        # =============================================================================
+        Host vm
+        	HostName dev-vm-sandon
+        	User sandon
       ''
       + lib.optionalString pkgs.stdenv.isLinux ''
 
