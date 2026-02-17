@@ -24,7 +24,7 @@ set -euo pipefail
 
 # 1Password item reference for the SSH key
 # Format: op://vault/item/field
-OP_SSH_KEY_REF="op://Employee/GH_SSH_KEY/private key"
+OP_SSH_KEY_REF="op://Employee/github-dotfiles-vm/private key"
 
 echo "=== Sandon's VM Bootstrap ==="
 echo ""
