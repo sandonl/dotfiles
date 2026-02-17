@@ -55,13 +55,24 @@
     # Note: .gitconfig is copied (not symlinked) so gh auth can write to it
     ".gitconfig-macos".source = ./dotfiles/gitconfig-macos;
     ".gitconfig-linux".source = ./dotfiles/gitconfig-linux;
-    ".ssh/config".source = ./dotfiles/ssh_config;
-    ".tmux.conf".source = ./dotfiles/tmux.conf;
+    ".ssh/config".text = builtins.readFile ./dotfiles/ssh_config
+      + lib.optionalString pkgs.stdenv.isDarwin ''
 
-    # OpenCode
-    ".config/opencode/opencode.jsonc".source = ./dotfiles/opencode/opencode.jsonc;
-    ".config/opencode/oh-my-opencode.json".source = ./dotfiles/opencode/oh-my-opencode.json;
-    ".config/opencode/package.json".source = ./dotfiles/opencode/package.json;
+        # =============================================================================
+        # 1Password SSH Agent (macOS only)
+        # =============================================================================
+        Host *
+        	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+      ''
+      + lib.optionalString pkgs.stdenv.isLinux ''
+
+        # =============================================================================
+        # GitHub (Linux VMs - use key file, no 1Password agent)
+        # =============================================================================
+        Host github.com
+        	IdentityFile ~/.ssh/id_ed25519_signing
+      '';
+    ".tmux.conf".source = ./dotfiles/tmux.conf;
   };
 
   # =============================================================================
