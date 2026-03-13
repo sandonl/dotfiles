@@ -22,10 +22,6 @@
   home.file."Library/Application Support/com.mitchellh.ghostty/config".source =
     ../home/dotfiles/ghostty.conf;
 
-  # Zed editor
-  home.file.".config/zed/settings.json".source = ../configs/zed/settings.json;
-  home.file.".config/zed/keymap.json".source = ../configs/zed/keymap.json;
-
   # Cursor editor
   home.file."Library/Application Support/Cursor/User/settings.json".source =
     ../configs/cursor/settings.json;
