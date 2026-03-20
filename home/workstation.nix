@@ -22,9 +22,6 @@
   home.file."Library/Application Support/com.mitchellh.ghostty/config".source =
     ../home/dotfiles/ghostty.conf;
 
-  # Cursor editor
-  home.file."Library/Application Support/Cursor/User/settings.json".source =
-    ../configs/cursor/settings.json;
 
   # =============================================================================
   # FZF (workstation gets full integration)
